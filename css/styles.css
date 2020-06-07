@@ -1,0 +1,106 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  position: absolute;
+}
+
+input {
+  font-size: 12px;
+}
+
+h1 {
+  color: #525454;
+  font-size: 22px;
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+
+ol, ul {
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 0px;
+  display:block;
+  list-style: none;
+  margin-top: 5px;
+}
+
+li {
+  display:block;
+  list-style: none;
+  padding: 0px 0px 0px 5px;;
+  margin-top: 5px;
+  color: #000000;
+}
+
+li:hover {
+  color: #829aad;
+  cursor: pointer;
+}
+
+a {
+  font-weight: bold;
+  line-height: 2.8em;
+  padding-right:.5em;
+  margin: 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map-canvas {
+  bottom:0px;
+  height: 100%;
+  position: relative;
+  right: 0px;
+}
+
+.options-box {
+  background: #fff;
+  line-height: 35px;
+  text-align: left;
+  height: auto;
+}
+
+.foursquare-img-style {
+	position: absolute;
+	float:left;
+  height: 25px;
+  width: 25px;
+}
+
+.footer {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  height: 52px;
+  color: white;
+}
+
+.footer .container {
+  width: auto;
+}
+
+.footer-name {
+  font-size: .8em;
+}
+
+@media(min-width: 1000px){
+  ul {
+    height: auto;
+  }
+}
+
+@media(max-width: 1000px){
+  ul {
+    height: 100px;
+    overflow: scroll;
+  }
+}

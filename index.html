@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Neighborhood Map</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+  	<div class="container col-md-12 col-sm-12 col-xs-12">
+      <div class="options-box col-md-3 col-sm-12 col-xs-12">
+        <nav class="col-md-12 col-sm-12 col-xs-12 id="sidebar">
+          <h1>Nearby Restaurants</h1>
+          <!-- Search -->
+          <input class="search" data-bind="textInput: searchOption" placeholder="Search Locations...">
+          <hr class="sidebar_hr">
+          <!-- List of restaurants and clicking will show on map-->
+          <ul class="nav flex-column" id="restaurants" data-bind="foreach: myLocationsFilter">
+              <li class="nav-item text-white location_list" data-bind="text: title, click: $parent.bounceMarker"><a href="#"></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-9 col-sm-12 col-xs-12 map-canvas" id="map"></div>
+    </div>
+    <footer class="footer col-sm-12 col-xs-12">
+      <div class="container text-left">
+        <a href="https://developer.foursquare.com/" class="href" target="_blank">
+          <img id="foursquare-img" class="foursquare-img-style" src="http://www.freeiconspng.com/uploads/foursquare-icon-22.png" alt="used with foursquare" >
+        </a>
+      </div>
+    </footer>
+    <script src="js/styles.js"></script>
+    <script src="js/locations.js"></script>
+    <script src="js/app.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAni8lvvu4Pq3hhuB3luGhavo-iIiywOhw&v=3&callback=startApp" onerror="myerrorhandler()" async defer></script>
+
+  </body>
+</html>
